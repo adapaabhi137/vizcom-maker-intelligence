@@ -1,0 +1,54 @@
+[
+  {
+    "input": {
+      "subreddit": "3Dprinting",
+      "title": "Easiest and fastest way to create 3d models? Any alternatives to CAD software?",
+      "body_summary": "Learning Fusion 360 but finds it slow and unintuitive. Needs a threaded clamp that fits an object on one side and clamps to a surface on the other, something they could sketch on paper in 30 seconds."
+    },
+    "output": {
+      "high_intent": true,
+      "intent_score": 78,
+      "object_goal": "threaded clamp with custom fittings for specific objects",
+      "workflow_blocker": "CAD software complexity and slow modeling process for simple functional parts",
+      "technical_level": "beginner",
+      "emotional_state": "frustrated",
+      "printer_owner_likelihood": "very_likely",
+      "response_recommended": true,
+      "reply_draft": "You've perfectly described the CAD friction that many makers face - spending hours modeling something that should be conceptually simple. For functional parts like clamps where you need quick iteration, tools like Vizcom can help bridge that gap between idea and printable design by letting you visualize concepts faster before committing to detailed CAD work.",
+      "needs_human_review": false,
+      "review_reason": ""
+    }
+  },
+  {
+    "input": {
+      "subreddit": "3Dprinting",
+      "title": "Hello i dont know how to 3d model but can anyone please help me?",
+      "body_summary": "Image-only post: a photo of a part with a hand-drawn dimensioned sketch."
+    },
+    "output": {
+      "high_intent": true,
+      "intent_score": 65,
+      "workflow_blocker": "Complete lack of CAD/3D modeling skills",
+      "technical_level": "beginner",
+      "emotional_state": "curious",
+      "response_recommended": true,
+      "reply_draft": "Happy to help you get started! What kind of object are you trying to create? If you're looking to bridge the gap between ideas and printable models without learning complex CAD, tools like Vizcom can help accelerate the concept-to-design workflow using sketches and AI assistance."
+    }
+  },
+  {
+    "input": {
+      "subreddit": "3Drequests",
+      "title": "Segmenting 3D Print Model for Color Print",
+      "body_summary": "Paid commission request: split an existing model into color-printable parts with connectors, about $25, 7-day turnaround."
+    },
+    "output": {
+      "intent_score": 35,
+      "workflow_blocker": "Lacks 3D modeling skills to segment existing model and add connectors",
+      "technical_level": "beginner",
+      "emotional_state": "neutral",
+      "response_recommended": false,
+      "reply_draft": "",
+      "note": "Commission request: the agent deliberately drafts no reply and flags the post instead of pitching a tool to someone who wants to hire a person."
+    }
+  }
+]

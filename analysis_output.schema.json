@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Maker post analysis",
+  "description": "Structured output the LLM returns for each Reddit post. Every downstream step (review queue, analytics, dashboard) reads these fields.",
+  "type": "object",
+  "required": [
+    "high_intent",
+    "intent_score",
+    "workflow_blocker",
+    "technical_level",
+    "emotional_state",
+    "response_recommended",
+    "reply_draft",
+    "needs_human_review",
+    "review_reason"
+  ],
+  "properties": {
+    "high_intent": {
+      "type": "boolean",
+      "description": "Does the author show real intent to make a physical object?"
+    },
+    "intent_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Strength of maker intent combined with workflow frustration."
+    },
+    "object_goal": {
+      "type": "string",
+      "description": "What the author is trying to make, e.g. 'custom headphone mount'."
+    },
+    "workflow_blocker": {
+      "type": "string",
+      "description": "The specific thing stopping them, e.g. 'Fusion 360 confusion'."
+    },
+    "technical_level": {
+      "type": "string",
+      "description": "Estimated skill level, e.g. 'beginner'."
+    },
+    "emotional_state": {
+      "type": "string",
+      "enum": ["curious", "excited", "frustrated", "neutral", "urgent"]
+    },
+    "printer_owner_likelihood": {
+      "type": "string",
+      "description": "How likely the author already owns a 3D printer, e.g. 'very_likely'."
+    },
+    "response_recommended": {
+      "type": "boolean",
+      "description": "Should a reply be drafted at all? False for commission requests, off-topic posts, etc."
+    },
+    "reply_draft": {
+      "type": "string",
+      "description": "Short, community-native reply. Empty when no response is recommended."
+    },
+    "needs_human_review": {
+      "type": "boolean",
+      "description": "Route to the review queue: high uncertainty, sensitive or personal topics, competitor mentions, commission requests."
+    },
+    "review_reason": {
+      "type": "string",
+      "description": "Why the post was flagged. Empty when not flagged."
+    }
+  }
+}
